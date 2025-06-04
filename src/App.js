@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter, HashRouter } from "react-router-dom";
 
 import LoginForm from "./components/LoginForm/login";
 import Home from "./components/HomePage/home";
@@ -11,14 +11,14 @@ import './App.css'; // Import your main CSS file
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/login" element={<LoginForm />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/CodeAnalysis" element={<CodeAnalysis />} />
                 <Route path='/Coding' element ={<Coding/>}/>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
